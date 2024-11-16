@@ -1,0 +1,19 @@
+spring:
+  config:
+    import:
+      - classpath:application-mysql.yml
+      - classpath:application-redis.yml
+
+#app:
+#  name: jack
+#  age: 30
+#  email: jack@123.com
+
+app:
+  name: jack
+  age: 30
+  email: jack@123.com
+  address:
+    city: BJ
+    street: ChaoYang
+    zipcode: 123456

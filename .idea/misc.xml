@@ -5,10 +5,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/sb3-01-first-web/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-02-core-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-03-test/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-04-external-config/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-05-aop/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
