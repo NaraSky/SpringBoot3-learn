@@ -2,13 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sb3-03-test" />
         <module name="sb3-01-first-web" />
+        <module name="sb3-07-mybatis-generator" />
+        <module name="sb3-08-ssm" />
         <module name="sb3-02-core-anno" />
+        <module name="sb3-06-mybatis" />
         <module name="sb3-04-external-config" />
         <module name="sb3-05-aop" />
       </profile>
@@ -21,6 +25,9 @@
       <module name="sb3-03-test" options="-parameters" />
       <module name="sb3-04-external-config" options="-parameters" />
       <module name="sb3-05-aop" options="-parameters" />
+      <module name="sb3-06-mybatis" options="-parameters" />
+      <module name="sb3-07-mybatis-generator" options="-parameters" />
+      <module name="sb3-08-ssm" options="-parameters" />
     </option>
   </component>
 </project>

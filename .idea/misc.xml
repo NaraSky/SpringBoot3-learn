@@ -9,6 +9,9 @@
         <option value="$PROJECT_DIR$/sb3-03-test/pom.xml" />
         <option value="$PROJECT_DIR$/sb3-04-external-config/pom.xml" />
         <option value="$PROJECT_DIR$/sb3-05-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-06-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-07-mybatis-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-08-ssm/pom.xml" />
       </list>
     </option>
   </component>

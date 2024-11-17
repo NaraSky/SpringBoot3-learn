@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lb.mybatis.repository.VipMapper">
+
+
+    <insert id="insert">
+        insert into t_vip(id, name, card_number, birth)
+        values (null, #{name}, #{cardNumber}, #{birth})
+    </insert>
+    <update id="update"> update t_vip
+                         set name=#{name},
+                             card_number=#{cardNumber},
+                             birth=#{birth}
+                         where id = #{id}
+    </update>
+    <delete id="deleteById"> delete
+                             from t_vip
+                             where id = #{id}
+    </delete>
+        <select id="selectById" resultType="com.lb.mybatis.model.Vip">select id, name, card_number as cardNumber, birth
+                                                                      from t_vip
+                                                                      where id = #{id}
+        </select>
+    <select id="selectAll" resultType="com.lb.mybatis.model.Vip">select id, name, card_number as cardNumber, birth
+                                                                 from t_vip
+    </select>
+</mapper>
