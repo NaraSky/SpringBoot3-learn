@@ -2,7 +2,7 @@
 ## 准备数据库表及数据
 创建数据库：springboot
 
-![image-20241117150929846](/home/lb/IdeaProjects/SpringBoot3/第3章 SSM整合.assets/image-20241117150929846.png)
+![image-20241117150929846](第3章 SSM整合.assets/image-20241117150929846.png)
 
 ## 创建SpringBoot项目
 使用脚手架创建Spring Boot项目,引入mysql驱动以及mybatis的启动器		

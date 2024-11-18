@@ -55,7 +55,7 @@
 ## 原理揭晓
 通过源码来分析一下：
 
-![image-20241116162753300](/home/lb/IdeaProjects/SpringBoot3/第2章 Spring Boot核心机制.assets/image-20241116162753300.png)
+![image-20241116162753300](第2章 Spring Boot核心机制.assets/image-20241116162753300.png)
 
 通过上图源码可以看到Spring Boot预先对开发中需要用到的依赖进行了版本的统一管理。我们需要和SpringBoot框架共享这个构建配置。因此官方推荐使用继承的方式引入SpringBoot框架。
 
@@ -150,14 +150,14 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 ## @SpringBootApplication注解
 Spring Boot的主入口程序被`@SpringBootApplication`注解标注，可见这个注解的重要性，查看它的源码：
 
-![image-20241116163254287](/home/lb/IdeaProjects/SpringBoot3/第2章 Spring Boot核心机制.assets/image-20241116163254287.png)
+![image-20241116163254287](第2章 Spring Boot核心机制.assets/image-20241116163254287.png)
 
 可以看出这个注解属于`组合注解`。拥有`@SpringBootConfiguration`、`@EnableAutoConfiguration`、`@ComponentScan`的功能。	
 
 ## @SpringBootConfiguration注解
 @SpringBootConfiguration注解的源码如下：
 
-![image-20241116163329825](/home/lb/IdeaProjects/SpringBoot3/第2章 Spring Boot核心机制.assets/image-20241116163329825.png)
+![image-20241116163329825](第2章 Spring Boot核心机制.assets/image-20241116163329825.png)
 
 可以看到这个注解的被`@Configuration`标注，说明`主入口`程序是一个配置类。也就是说主入口中的方法可以被`@Bean`注解标注，被`@Bean`注解的标注的方法会被Spring容器自动调用，并且将该方法的返回对象纳入IoC容器的管理。测试一下：
 
@@ -193,7 +193,7 @@ public class Sb302CoreAnnoApplication {
 
 执行结果：
 
-![image-20241116163705897](/home/lb/IdeaProjects/SpringBoot3/第2章 Spring Boot核心机制.assets/image-20241116163705897.png)
+![image-20241116163705897](第2章 Spring Boot核心机制.assets/image-20241116163705897.png)
 
 通过测试我们也认证了这一点：`SpringBoot主入口类实际上就是一个配置类`。这个`配置类`也可以称为`源`，起源的意思，SpringBoot从这个配置类开始加载项目中所有的bean。
 
@@ -231,7 +231,7 @@ spring.datasource.password=123456
 使用脚手架创建sb3-06-test模块，不添加任何启动器：		
 
 ### 编写service
-<img src="/home/lb/IdeaProjects/SpringBoot3/第2章 Spring Boot核心机制.assets/image-20241116164758142.png" alt="image-20241116164758142" style="zoom:50%;" />
+<img src="第2章 Spring Boot核心机制.assets/image-20241116164758142.png" alt="image-20241116164758142" style="zoom:50%;" />
 
 ```java
 package com.lb.springboot3;
@@ -269,7 +269,7 @@ public class Sb303TestApplication {
 
 执行结果：
 
-![image-20241116164851775](/home/lb/IdeaProjects/SpringBoot3/第2章 Spring Boot核心机制.assets/image-20241116164851775.png)
+![image-20241116164851775](第2章 Spring Boot核心机制.assets/image-20241116164851775.png)
 
 这种方式就是手动获取Spring上下文对象`ConfigurableApplicationContext`，然后调用getBean方法从Spring容器中获取service对象，然后调用方法。
 

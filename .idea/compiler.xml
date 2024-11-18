@@ -15,19 +15,21 @@
         <module name="sb3-06-mybatis" />
         <module name="sb3-04-external-config" />
         <module name="sb3-05-aop" />
+        <module name="sb3-09-auto-configuration" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="sb3-01-first-web" options="-parameters" />
-      <module name="sb3-02-core-anno" options="-parameters" />
-      <module name="sb3-03-test" options="-parameters" />
-      <module name="sb3-04-external-config" options="-parameters" />
-      <module name="sb3-05-aop" options="-parameters" />
-      <module name="sb3-06-mybatis" options="-parameters" />
-      <module name="sb3-07-mybatis-generator" options="-parameters" />
-      <module name="sb3-08-ssm" options="-parameters" />
+      <module name="sb3-01-first-web" options="" />
+      <module name="sb3-02-core-anno" options="" />
+      <module name="sb3-03-test" options="" />
+      <module name="sb3-04-external-config" options="" />
+      <module name="sb3-05-aop" options="" />
+      <module name="sb3-06-mybatis" options="" />
+      <module name="sb3-07-mybatis-generator" options="" />
+      <module name="sb3-08-ssm" options="" />
+      <module name="sb3-09-auto-configuration" options="-parameters" />
     </option>
   </component>
 </project>
