@@ -5,8 +5,6 @@
 spring.main.banner-mode=off
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
-
 ### 代码方式
 第一种代码：
 
@@ -21,8 +19,6 @@ public class Springboot322WebServerApplication {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
-
 第二种代码：流式编程/链式编程
 
 ```java
@@ -31,8 +27,6 @@ new SpringApplicationBuilder()
                 .bannerMode(Banner.Mode.OFF)
                 .run(args);
 ```
-
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
 
 ## 修改logo图标
 在`src/main/resources`目录下存放一个`banner.txt`文件。文件名固定。
@@ -47,8 +41,6 @@ new SpringApplicationBuilder()
 
 获取图标粘贴到`banner.txt`文件中运行程序即可。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
-
 # PageHelper整合
 官网地址：[https://pagehelper.github.io/](https://pagehelper.github.io/)
 
@@ -60,8 +52,6 @@ new SpringApplicationBuilder()
     <version>2.1.0</version>
 </dependency>
 ```
-
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
 
 ## 编写代码
 ```java
@@ -82,8 +72,6 @@ public class VipController {
     }
 }
 ```
-
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
 
 # web层响应结果封装
 对于前后端分离的系统来说，为了降低沟通成本，我们有必要给前端系统开发人员返回统一格式的JSON数据。多数开发团队一般都会封装一个`R`对象来解决统一响应格式的问题。
@@ -153,8 +141,6 @@ public class R<T> {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
-
 ## 改进R对象
 以上`R`对象存在的问题是，难以维护，项目中可能会出现很多这样的代码：R.FAIL(400, "修改失败")。
 
@@ -185,8 +171,6 @@ public enum CodeEnum {
 
 }
 ```
-
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
 
 改进R：
 
@@ -237,8 +221,6 @@ public class R<T> {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
-
 # 事务管理
 SpringBoot中的事务管理仍然使用的Spring框架中的事务管理机制，在代码实现上更为简单了。不需要手动配置事务管理器，SpringBoot自动配置完成了。我们只需要使用`@Transactional`注解标注需要控制事务的方法即可。另外事务的特性等仍然延用Spring框架。大家可以在老杜发布的Spring视频教程中详细学习事务管理机制。以下代码是在SpringBoot框架中进行的事务控制：
 
@@ -273,8 +255,6 @@ public class AccountServiceImpl implements AccountService {
 
 我们只需要在需要控制事务的方法上，或者类上，使用`@Transactional`注解进行标注即可。然后事务的特性和之前Spring中是完全相同的。最重要的是其他的配置我们一律是不需要的。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
-
 # SpringBoot打war包
 第一步：将打包方式设置为war
 
@@ -297,8 +277,6 @@ public class AccountServiceImpl implements AccountService {
     </exclusions>
 </dependency>
 ```
-
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
 
 第三步：添加servlet api依赖（引入tomcat，但scope设置为provided，这样这个tomcat服务器就不会打入war包了）
 
@@ -329,8 +307,6 @@ public class Springboot324TransactionApplication extends SpringBootServletInitia
 
 }
 ```
-
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730804471502-31c64115-c49a-4d76-92e0-90e9ae543b32.png)
 
 第五步：执行package命令打war包
 
