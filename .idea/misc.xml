@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/sb3-07-mybatis-generator/pom.xml" />
         <option value="$PROJECT_DIR$/sb3-08-ssm/pom.xml" />
         <option value="$PROJECT_DIR$/sb3-09-auto-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-10-web/pom.xml" />
+        <option value="$PROJECT_DIR$/sb3-11-exception/pom.xml" />
       </list>
     </option>
   </component>

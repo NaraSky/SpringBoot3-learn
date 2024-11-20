@@ -10,5 +10,7 @@
     <file url="file://$PROJECT_DIR$/sb3-07-mybatis-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sb3-08-ssm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sb3-09-auto-configuration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sb3-10-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sb3-11-exception/src/main/java" charset="UTF-8" />
   </component>
 </project>

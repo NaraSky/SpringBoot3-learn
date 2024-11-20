@@ -9,7 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sb3-03-test" />
         <module name="sb3-01-first-web" />
+        <module name="sb3-10-web" />
         <module name="sb3-07-mybatis-generator" />
+        <module name="sb3-11-exception" />
         <module name="sb3-08-ssm" />
         <module name="sb3-02-core-anno" />
         <module name="sb3-06-mybatis" />
@@ -30,6 +32,8 @@
       <module name="sb3-07-mybatis-generator" options="" />
       <module name="sb3-08-ssm" options="" />
       <module name="sb3-09-auto-configuration" options="-parameters" />
+      <module name="sb3-10-web" options="-parameters" />
+      <module name="sb3-11-exception" options="-parameters" />
     </option>
   </component>
 </project>
